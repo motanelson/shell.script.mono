@@ -323,7 +323,7 @@ public partial class Form1 : Form
                     // Configure the process start info
                     ProcessStartInfo psi = new ProcessStartInfo
                     {
-                        FileName = "cmd.exe",              // Run CMD
+                        FileName = "bash",              // Run CMD
                         Arguments = "/c " + args,       // /c = run command and exit
                         RedirectStandardOutput = true,     // Capture output
                         RedirectStandardError = true,      // Capture errors
@@ -343,8 +343,8 @@ public partial class Form1 : Form
 
                         // Display results
 
-                        textBox2.Text = textBox2.Text + output + "\n";
-                        textBox2.Text = textBox2.Text + errors + "\n";
+                        textBox2.Text = textBox2.Text + output + "\r\n";
+                        textBox2.Text = textBox2.Text + errors + "\r\n";
 
                     }
 
